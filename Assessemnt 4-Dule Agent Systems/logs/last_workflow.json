@@ -1,0 +1,169 @@
+{
+  "status": "max_iterations_exceeded",
+  "iterations": 5,
+  "error": "Exceeded maximum allowed interaction steps",
+  "logs": [
+    {
+      "sender": "orchestrator",
+      "receiver": "planner_agent",
+      "intent": "propose_plan",
+      "content": {
+        "destination": "Brisbane, QLD",
+        "budget_limit_aud": 1200.0,
+        "trip_duration_days": 3
+      },
+      "constraints": {
+        "max_budget": 100.0
+      },
+      "timestamp": "2026-10-11T08:02:45.750684+00:00"
+    },
+    {
+      "sender": "planner_agent",
+      "receiver": "validator_agent",
+      "intent": "validate_itinerary",
+      "content": {
+        "destination": "Brisbane, QLD",
+        "budget_limit_aud": 1200.0,
+        "trip_duration_days": 3,
+        "itinerary_steps": [
+          {
+            "step_id": 1,
+            "activity": "Hotel Accommodation",
+            "estimated_cost_aud": 450.0,
+            "details": "3 nights central hotel"
+          },
+          {
+            "step_id": 2,
+            "activity": "Riverfire Event Access & Transport",
+            "estimated_cost_aud": 50.0,
+            "details": "Public transit and viewing pass"
+          }
+        ],
+        "total_estimated_cost": 500.0,
+        "revision_notes": "Initial draft"
+      },
+      "constraints": {
+        "max_budget": 100.0
+      },
+      "timestamp": "2026-10-11T08:02:45.751354+00:00"
+    },
+    {
+      "sender": "validator_agent",
+      "receiver": "planner_agent",
+      "intent": "request_revision",
+      "content": {
+        "feedback": "Total cost $500.00 exceeds budget $100.00",
+        "failed_steps": [
+          {
+            "step_id": 1,
+            "activity": "Hotel Accommodation",
+            "estimated_cost_aud": 450.0,
+            "details": "3 nights central hotel"
+          },
+          {
+            "step_id": 2,
+            "activity": "Riverfire Event Access & Transport",
+            "estimated_cost_aud": 50.0,
+            "details": "Public transit and viewing pass"
+          }
+        ],
+        "destination": "Brisbane, QLD",
+        "budget_limit_aud": 1200.0,
+        "trip_duration_days": 3
+      },
+      "constraints": {
+        "max_budget": 100.0
+      },
+      "timestamp": "2026-10-11T08:02:45.752604+00:00"
+    },
+    {
+      "sender": "planner_agent",
+      "receiver": "validator_agent",
+      "intent": "validate_itinerary",
+      "content": {
+        "destination": "Brisbane, QLD",
+        "budget_limit_aud": 1200.0,
+        "trip_duration_days": 3,
+        "itinerary_steps": [
+          {
+            "step_id": 1,
+            "activity": "Budget Accommodation",
+            "estimated_cost_aud": 350.0,
+            "details": "Revised budget hotel"
+          },
+          {
+            "step_id": 2,
+            "activity": "Riverfire Event Access",
+            "estimated_cost_aud": 50.0,
+            "details": "Standard viewing pass"
+          }
+        ],
+        "total_estimated_cost": 400.0,
+        "revision_notes": "Revised based on feedback"
+      },
+      "constraints": {
+        "max_budget": 100.0
+      },
+      "timestamp": "2026-10-11T08:02:45.753286+00:00"
+    },
+    {
+      "sender": "validator_agent",
+      "receiver": "planner_agent",
+      "intent": "request_revision",
+      "content": {
+        "feedback": "Total cost $400.00 exceeds budget $100.00",
+        "failed_steps": [
+          {
+            "step_id": 1,
+            "activity": "Budget Accommodation",
+            "estimated_cost_aud": 350.0,
+            "details": "Revised budget hotel"
+          },
+          {
+            "step_id": 2,
+            "activity": "Riverfire Event Access",
+            "estimated_cost_aud": 50.0,
+            "details": "Standard viewing pass"
+          }
+        ],
+        "destination": "Brisbane, QLD",
+        "budget_limit_aud": 1200.0,
+        "trip_duration_days": 3
+      },
+      "constraints": {
+        "max_budget": 100.0
+      },
+      "timestamp": "2026-10-11T08:02:45.753739+00:00"
+    },
+    {
+      "sender": "planner_agent",
+      "receiver": "validator_agent",
+      "intent": "validate_itinerary",
+      "content": {
+        "destination": "Brisbane, QLD",
+        "budget_limit_aud": 1200.0,
+        "trip_duration_days": 3,
+        "itinerary_steps": [
+          {
+            "step_id": 1,
+            "activity": "Budget Accommodation",
+            "estimated_cost_aud": 350.0,
+            "details": "Revised budget hotel"
+          },
+          {
+            "step_id": 2,
+            "activity": "Riverfire Event Access",
+            "estimated_cost_aud": 50.0,
+            "details": "Standard viewing pass"
+          }
+        ],
+        "total_estimated_cost": 400.0,
+        "revision_notes": "Revised based on feedback"
+      },
+      "constraints": {
+        "max_budget": 100.0
+      },
+      "timestamp": "2026-10-11T08:02:45.754444+00:00"
+    }
+  ]
+}

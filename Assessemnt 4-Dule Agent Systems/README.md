@@ -11,19 +11,19 @@ Requires Python 3.10+.
 Install dependencies:
 
 ```bash
-python -m pip install -r requirements.txt
+python -m pip install -r requirements.txt or py -m pip install -r requirements.txt
 ```
 
 Run the application:
 
 ```bash
-python orchestrator.py
+python orchestrator.py or py orchestrator.py
 ```
 
 Run automated tests:
 
 ```bash
-python -m unittest -v test_agents.py
+python -m unittest -v test_agents.py or py -m unittest -v test_agents.py
 ```
 
 ## Project Structure
@@ -84,7 +84,7 @@ The project includes six automated unit tests:
 Run all tests using:
 
 ```bash
-python -m unittest -v test_agents.py
+python -m unittest -v test_agents.py or py -m unittest -v test_agents.py
 ```
 
 ## Future Improvements

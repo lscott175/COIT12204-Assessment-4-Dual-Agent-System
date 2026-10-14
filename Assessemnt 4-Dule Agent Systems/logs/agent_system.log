@@ -65,3 +65,274 @@ TimeoutError: Agent 'planner_agent' exceeded 0.01s timeout
 2026-10-11 18:02:45,754 [INFO] AgentSystem: planner_agent SENT validate_itinerary to validator_agent
 2026-10-11 18:02:45,754 [INFO] Orchestrator: Route: planner_agent -> validator_agent [validate_itinerary]
 2026-10-11 18:02:45,754 [WARNING] Orchestrator: Maximum iterations reached
+2026-10-14 17:34:26,800 [INFO] Orchestrator: Route: orchestrator -> planner_agent [propose_plan]
+2026-10-14 17:34:26,803 [INFO] AgentSystem: planner_agent RECEIVED propose_plan from orchestrator
+2026-10-14 17:34:26,803 [INFO] AgentSystem: planner_agent SENT validate_itinerary to validator_agent
+2026-10-14 17:34:26,803 [INFO] Orchestrator: Route: planner_agent -> validator_agent [validate_itinerary]
+2026-10-14 17:34:26,804 [INFO] AgentSystem: validator_agent RECEIVED validate_itinerary from planner_agent
+2026-10-14 17:34:26,804 [INFO] AgentSystem: validator_agent SENT request_revision to planner_agent
+2026-10-14 17:34:26,805 [INFO] Orchestrator: Route: validator_agent -> planner_agent [request_revision]
+2026-10-14 17:34:26,805 [INFO] AgentSystem: planner_agent RECEIVED request_revision from validator_agent
+2026-10-14 17:34:26,805 [INFO] AgentSystem: Planner revising: Total cost $500.00 exceeds budget $450.00
+2026-10-14 17:34:26,805 [INFO] AgentSystem: planner_agent SENT validate_itinerary to validator_agent
+2026-10-14 17:34:26,806 [INFO] Orchestrator: Route: planner_agent -> validator_agent [validate_itinerary]
+2026-10-14 17:34:26,806 [INFO] AgentSystem: validator_agent RECEIVED validate_itinerary from planner_agent
+2026-10-14 17:34:26,806 [INFO] AgentSystem: validator_agent SENT approve_plan to orchestrator
+2026-10-14 17:34:26,806 [INFO] Orchestrator: Route: validator_agent -> orchestrator [approve_plan]
+2026-10-14 17:35:36,703 [INFO] Orchestrator: Route: orchestrator -> planner_agent [propose_plan]
+2026-10-14 17:35:36,704 [INFO] AgentSystem: planner_agent RECEIVED propose_plan from orchestrator
+2026-10-14 17:35:36,704 [INFO] AgentSystem: planner_agent SENT validate_itinerary to validator_agent
+2026-10-14 17:35:36,704 [INFO] Orchestrator: Route: planner_agent -> validator_agent [validate_itinerary]
+2026-10-14 17:35:36,704 [INFO] AgentSystem: validator_agent RECEIVED validate_itinerary from planner_agent
+2026-10-14 17:35:36,705 [INFO] AgentSystem: validator_agent SENT approve_plan to orchestrator
+2026-10-14 17:35:36,705 [INFO] Orchestrator: Route: validator_agent -> orchestrator [approve_plan]
+2026-10-14 17:35:57,487 [ERROR] Orchestrator: Invalid request: A destination is required
+2026-10-14 17:35:57,492 [INFO] Orchestrator: Route: orchestrator -> planner_agent [propose_plan]
+2026-10-14 17:35:57,493 [INFO] AgentSystem: planner_agent RECEIVED propose_plan from orchestrator
+2026-10-14 17:35:57,493 [INFO] AgentSystem: planner_agent SENT validate_itinerary to validator_agent
+2026-10-14 17:35:57,494 [INFO] Orchestrator: Route: planner_agent -> validator_agent [validate_itinerary]
+2026-10-14 17:35:57,494 [INFO] AgentSystem: validator_agent RECEIVED validate_itinerary from planner_agent
+2026-10-14 17:35:57,494 [INFO] AgentSystem: validator_agent SENT request_revision to planner_agent
+2026-10-14 17:35:57,494 [INFO] Orchestrator: Route: validator_agent -> planner_agent [request_revision]
+2026-10-14 17:35:57,495 [INFO] AgentSystem: planner_agent RECEIVED request_revision from validator_agent
+2026-10-14 17:35:57,495 [INFO] AgentSystem: Planner revising: Total cost $500.00 exceeds budget $450.00
+2026-10-14 17:35:57,495 [INFO] AgentSystem: planner_agent SENT validate_itinerary to validator_agent
+2026-10-14 17:35:57,495 [INFO] Orchestrator: Route: planner_agent -> validator_agent [validate_itinerary]
+2026-10-14 17:35:57,495 [INFO] AgentSystem: validator_agent RECEIVED validate_itinerary from planner_agent
+2026-10-14 17:35:57,495 [INFO] AgentSystem: validator_agent SENT approve_plan to orchestrator
+2026-10-14 17:35:57,495 [INFO] Orchestrator: Route: validator_agent -> orchestrator [approve_plan]
+2026-10-14 17:35:57,500 [INFO] Orchestrator: Route: orchestrator -> planner_agent [propose_plan]
+2026-10-14 17:35:57,500 [INFO] AgentSystem: planner_agent RECEIVED propose_plan from orchestrator
+2026-10-14 17:35:57,501 [INFO] AgentSystem: planner_agent SENT validate_itinerary to validator_agent
+2026-10-14 17:35:57,501 [INFO] Orchestrator: Route: planner_agent -> validator_agent [validate_itinerary]
+2026-10-14 17:35:57,502 [INFO] AgentSystem: validator_agent RECEIVED validate_itinerary from planner_agent
+2026-10-14 17:35:57,502 [INFO] AgentSystem: validator_agent SENT approve_plan to orchestrator
+2026-10-14 17:35:57,503 [INFO] Orchestrator: Route: validator_agent -> orchestrator [approve_plan]
+2026-10-14 17:35:57,514 [INFO] Orchestrator: Route: orchestrator -> planner_agent [propose_plan]
+2026-10-14 17:35:57,527 [ERROR] Orchestrator: Workflow failed during agent execution
+Traceback (most recent call last):
+  File "C:\Users\lscot\Documents\Uni\2026\Term 2\COIT12204-AI-Assisted Software Development\Assessment 4\Assessemnt 4-Dule Agent Systems\orchestrator.py", line 50, in route_message
+    response = future.result(timeout=self.timeout_seconds)
+  File "C:\Users\lscot\AppData\Local\Programs\Python\Python313\Lib\concurrent\futures\_base.py", line 458, in result
+    raise TimeoutError()
+TimeoutError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\lscot\Documents\Uni\2026\Term 2\COIT12204-AI-Assisted Software Development\Assessment 4\Assessemnt 4-Dule Agent Systems\orchestrator.py", line 140, in run_workflow
+    current = self.route_message(current)
+  File "C:\Users\lscot\Documents\Uni\2026\Term 2\COIT12204-AI-Assisted Software Development\Assessment 4\Assessemnt 4-Dule Agent Systems\orchestrator.py", line 59, in route_message
+    raise TimeoutError(
+        f"Agent '{message.receiver}' exceeded {self.timeout_seconds}s timeout"
+    ) from exc
+TimeoutError: Agent 'planner_agent' exceeded 0.01s timeout
+2026-10-14 17:35:57,546 [INFO] Orchestrator: Route: orchestrator -> planner_agent [propose_plan]
+2026-10-14 17:35:57,546 [INFO] AgentSystem: planner_agent RECEIVED propose_plan from orchestrator
+2026-10-14 17:35:57,547 [INFO] AgentSystem: planner_agent SENT validate_itinerary to validator_agent
+2026-10-14 17:35:57,547 [INFO] Orchestrator: Route: planner_agent -> validator_agent [validate_itinerary]
+2026-10-14 17:35:57,548 [INFO] AgentSystem: validator_agent RECEIVED validate_itinerary from planner_agent
+2026-10-14 17:35:57,548 [INFO] AgentSystem: validator_agent SENT request_revision to planner_agent
+2026-10-14 17:35:57,548 [INFO] Orchestrator: Route: validator_agent -> planner_agent [request_revision]
+2026-10-14 17:35:57,548 [INFO] AgentSystem: planner_agent RECEIVED request_revision from validator_agent
+2026-10-14 17:35:57,548 [INFO] AgentSystem: Planner revising: Total cost $500.00 exceeds budget $100.00
+2026-10-14 17:35:57,548 [INFO] AgentSystem: planner_agent SENT validate_itinerary to validator_agent
+2026-10-14 17:35:57,549 [INFO] Orchestrator: Route: planner_agent -> validator_agent [validate_itinerary]
+2026-10-14 17:35:57,549 [INFO] AgentSystem: validator_agent RECEIVED validate_itinerary from planner_agent
+2026-10-14 17:35:57,549 [INFO] AgentSystem: validator_agent SENT request_revision to planner_agent
+2026-10-14 17:35:57,549 [INFO] Orchestrator: Route: validator_agent -> planner_agent [request_revision]
+2026-10-14 17:35:57,549 [INFO] AgentSystem: planner_agent RECEIVED request_revision from validator_agent
+2026-10-14 17:35:57,550 [INFO] AgentSystem: Planner revising: Total cost $400.00 exceeds budget $100.00
+2026-10-14 17:35:57,550 [INFO] AgentSystem: planner_agent SENT validate_itinerary to validator_agent
+2026-10-14 17:35:57,550 [INFO] Orchestrator: Route: planner_agent -> validator_agent [validate_itinerary]
+2026-10-14 17:35:57,550 [WARNING] Orchestrator: Maximum iterations reached
+2026-10-14 17:55:34,005 [INFO] Orchestrator: Route: orchestrator -> planner_agent [propose_plan]
+2026-10-14 17:55:34,006 [INFO] AgentSystem: planner_agent RECEIVED propose_plan from orchestrator
+2026-10-14 17:55:34,006 [INFO] AgentSystem: planner_agent SENT validate_itinerary to validator_agent
+2026-10-14 17:55:34,007 [INFO] Orchestrator: Route: planner_agent -> validator_agent [validate_itinerary]
+2026-10-14 17:55:34,007 [INFO] AgentSystem: validator_agent RECEIVED validate_itinerary from planner_agent
+2026-10-14 17:55:34,007 [INFO] AgentSystem: validator_agent SENT approve_plan to orchestrator
+2026-10-14 17:55:34,007 [INFO] Orchestrator: Route: validator_agent -> orchestrator [approve_plan]
+2026-10-14 18:01:41,599 [INFO] Orchestrator: Route: orchestrator -> planner_agent [propose_plan]
+2026-10-14 18:01:41,601 [INFO] AgentSystem: planner_agent RECEIVED propose_plan from orchestrator
+2026-10-14 18:01:41,601 [INFO] AgentSystem: planner_agent SENT validate_itinerary to validator_agent
+2026-10-14 18:01:41,601 [INFO] Orchestrator: Route: planner_agent -> validator_agent [validate_itinerary]
+2026-10-14 18:01:41,601 [INFO] AgentSystem: validator_agent RECEIVED validate_itinerary from planner_agent
+2026-10-14 18:01:41,601 [INFO] AgentSystem: validator_agent SENT approve_plan to orchestrator
+2026-10-14 18:01:41,602 [INFO] Orchestrator: Route: validator_agent -> orchestrator [approve_plan]
+2026-10-14 18:01:56,169 [INFO] Orchestrator: Route: orchestrator -> planner_agent [propose_plan]
+2026-10-14 18:01:56,171 [INFO] AgentSystem: planner_agent RECEIVED propose_plan from orchestrator
+2026-10-14 18:01:56,171 [INFO] AgentSystem: planner_agent SENT validate_itinerary to validator_agent
+2026-10-14 18:01:56,171 [INFO] Orchestrator: Route: planner_agent -> validator_agent [validate_itinerary]
+2026-10-14 18:01:56,171 [INFO] AgentSystem: validator_agent RECEIVED validate_itinerary from planner_agent
+2026-10-14 18:01:56,172 [INFO] AgentSystem: validator_agent SENT request_revision to planner_agent
+2026-10-14 18:01:56,172 [INFO] Orchestrator: Route: validator_agent -> planner_agent [request_revision]
+2026-10-14 18:01:56,172 [INFO] AgentSystem: planner_agent RECEIVED request_revision from validator_agent
+2026-10-14 18:01:56,172 [INFO] AgentSystem: Planner revising: Total cost $500.00 exceeds budget $450.00
+2026-10-14 18:01:56,172 [INFO] AgentSystem: planner_agent SENT validate_itinerary to validator_agent
+2026-10-14 18:01:56,172 [INFO] Orchestrator: Route: planner_agent -> validator_agent [validate_itinerary]
+2026-10-14 18:01:56,173 [INFO] AgentSystem: validator_agent RECEIVED validate_itinerary from planner_agent
+2026-10-14 18:01:56,173 [INFO] AgentSystem: validator_agent SENT approve_plan to orchestrator
+2026-10-14 18:01:56,173 [INFO] Orchestrator: Route: validator_agent -> orchestrator [approve_plan]
+2026-10-14 18:08:34,129 [INFO] Orchestrator: Route: orchestrator -> planner_agent [propose_plan]
+2026-10-14 18:08:34,130 [INFO] AgentSystem: planner_agent RECEIVED propose_plan from orchestrator
+2026-10-14 18:08:34,131 [INFO] AgentSystem: planner_agent SENT validate_itinerary to validator_agent
+2026-10-14 18:08:34,131 [INFO] Orchestrator: Route: planner_agent -> validator_agent [validate_itinerary]
+2026-10-14 18:08:34,131 [INFO] AgentSystem: validator_agent RECEIVED validate_itinerary from planner_agent
+2026-10-14 18:08:34,131 [INFO] AgentSystem: validator_agent SENT approve_plan to orchestrator
+2026-10-14 18:08:34,131 [INFO] Orchestrator: Route: validator_agent -> orchestrator [approve_plan]
+2026-10-14 18:09:38,947 [INFO] Orchestrator: Route: orchestrator -> planner_agent [propose_plan]
+2026-10-14 18:09:38,948 [INFO] AgentSystem: planner_agent RECEIVED propose_plan from orchestrator
+2026-10-14 18:09:38,948 [INFO] AgentSystem: planner_agent SENT validate_itinerary to validator_agent
+2026-10-14 18:09:38,948 [INFO] Orchestrator: Route: planner_agent -> validator_agent [validate_itinerary]
+2026-10-14 18:09:38,949 [INFO] AgentSystem: validator_agent RECEIVED validate_itinerary from planner_agent
+2026-10-14 18:09:38,949 [INFO] AgentSystem: validator_agent SENT request_revision to planner_agent
+2026-10-14 18:09:38,949 [INFO] Orchestrator: Route: validator_agent -> planner_agent [request_revision]
+2026-10-14 18:09:38,950 [INFO] AgentSystem: planner_agent RECEIVED request_revision from validator_agent
+2026-10-14 18:09:38,950 [INFO] AgentSystem: Planner revising: Total cost $500.00 exceeds budget $450.00
+2026-10-14 18:09:38,950 [INFO] AgentSystem: planner_agent SENT validate_itinerary to validator_agent
+2026-10-14 18:09:38,950 [INFO] Orchestrator: Route: planner_agent -> validator_agent [validate_itinerary]
+2026-10-14 18:09:38,950 [INFO] AgentSystem: validator_agent RECEIVED validate_itinerary from planner_agent
+2026-10-14 18:09:38,950 [INFO] AgentSystem: validator_agent SENT approve_plan to orchestrator
+2026-10-14 18:09:38,950 [INFO] Orchestrator: Route: validator_agent -> orchestrator [approve_plan]
+2026-10-14 18:10:37,957 [ERROR] Orchestrator: Invalid request: A destination is required
+2026-10-14 18:10:37,959 [INFO] Orchestrator: Route: orchestrator -> planner_agent [propose_plan]
+2026-10-14 18:10:37,961 [INFO] AgentSystem: planner_agent RECEIVED propose_plan from orchestrator
+2026-10-14 18:10:37,961 [INFO] AgentSystem: planner_agent SENT validate_itinerary to validator_agent
+2026-10-14 18:10:37,961 [INFO] Orchestrator: Route: planner_agent -> validator_agent [validate_itinerary]
+2026-10-14 18:10:37,961 [INFO] AgentSystem: validator_agent RECEIVED validate_itinerary from planner_agent
+2026-10-14 18:10:37,962 [INFO] AgentSystem: validator_agent SENT request_revision to planner_agent
+2026-10-14 18:10:37,962 [INFO] Orchestrator: Route: validator_agent -> planner_agent [request_revision]
+2026-10-14 18:10:37,962 [INFO] AgentSystem: planner_agent RECEIVED request_revision from validator_agent
+2026-10-14 18:10:37,962 [INFO] AgentSystem: Planner revising: Total cost $500.00 exceeds budget $450.00
+2026-10-14 18:10:37,962 [INFO] AgentSystem: planner_agent SENT validate_itinerary to validator_agent
+2026-10-14 18:10:37,963 [INFO] Orchestrator: Route: planner_agent -> validator_agent [validate_itinerary]
+2026-10-14 18:10:37,964 [INFO] AgentSystem: validator_agent RECEIVED validate_itinerary from planner_agent
+2026-10-14 18:10:37,964 [INFO] AgentSystem: validator_agent SENT approve_plan to orchestrator
+2026-10-14 18:10:37,964 [INFO] Orchestrator: Route: validator_agent -> orchestrator [approve_plan]
+2026-10-14 18:10:37,968 [INFO] Orchestrator: Route: orchestrator -> planner_agent [propose_plan]
+2026-10-14 18:10:37,969 [INFO] AgentSystem: planner_agent RECEIVED propose_plan from orchestrator
+2026-10-14 18:10:37,969 [INFO] AgentSystem: planner_agent SENT validate_itinerary to validator_agent
+2026-10-14 18:10:37,969 [INFO] Orchestrator: Route: planner_agent -> validator_agent [validate_itinerary]
+2026-10-14 18:10:37,969 [INFO] AgentSystem: validator_agent RECEIVED validate_itinerary from planner_agent
+2026-10-14 18:10:37,969 [INFO] AgentSystem: validator_agent SENT approve_plan to orchestrator
+2026-10-14 18:10:37,970 [INFO] Orchestrator: Route: validator_agent -> orchestrator [approve_plan]
+2026-10-14 18:10:37,983 [INFO] Orchestrator: Route: orchestrator -> planner_agent [propose_plan]
+2026-10-14 18:10:38,006 [ERROR] Orchestrator: Workflow failed during agent execution
+Traceback (most recent call last):
+  File "C:\Users\lscot\Documents\Uni\2026\Term 2\COIT12204-AI-Assisted Software Development\Assessment 4\Assessemnt 4-Dule Agent Systems\orchestrator.py", line 50, in route_message
+    response = future.result(timeout=self.timeout_seconds)
+  File "C:\Users\lscot\AppData\Local\Programs\Python\Python313\Lib\concurrent\futures\_base.py", line 458, in result
+    raise TimeoutError()
+TimeoutError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\lscot\Documents\Uni\2026\Term 2\COIT12204-AI-Assisted Software Development\Assessment 4\Assessemnt 4-Dule Agent Systems\orchestrator.py", line 140, in run_workflow
+    current = self.route_message(current)
+  File "C:\Users\lscot\Documents\Uni\2026\Term 2\COIT12204-AI-Assisted Software Development\Assessment 4\Assessemnt 4-Dule Agent Systems\orchestrator.py", line 59, in route_message
+    raise TimeoutError(
+        f"Agent '{message.receiver}' exceeded {self.timeout_seconds}s timeout"
+    ) from exc
+TimeoutError: Agent 'planner_agent' exceeded 0.01s timeout
+2026-10-14 18:10:38,016 [INFO] Orchestrator: Route: orchestrator -> planner_agent [propose_plan]
+2026-10-14 18:10:38,017 [INFO] AgentSystem: planner_agent RECEIVED propose_plan from orchestrator
+2026-10-14 18:10:38,017 [INFO] AgentSystem: planner_agent SENT validate_itinerary to validator_agent
+2026-10-14 18:10:38,017 [INFO] Orchestrator: Route: planner_agent -> validator_agent [validate_itinerary]
+2026-10-14 18:10:38,017 [INFO] AgentSystem: validator_agent RECEIVED validate_itinerary from planner_agent
+2026-10-14 18:10:38,017 [INFO] AgentSystem: validator_agent SENT request_revision to planner_agent
+2026-10-14 18:10:38,017 [INFO] Orchestrator: Route: validator_agent -> planner_agent [request_revision]
+2026-10-14 18:10:38,018 [INFO] AgentSystem: planner_agent RECEIVED request_revision from validator_agent
+2026-10-14 18:10:38,018 [INFO] AgentSystem: Planner revising: Total cost $500.00 exceeds budget $100.00
+2026-10-14 18:10:38,018 [INFO] AgentSystem: planner_agent SENT validate_itinerary to validator_agent
+2026-10-14 18:10:38,018 [INFO] Orchestrator: Route: planner_agent -> validator_agent [validate_itinerary]
+2026-10-14 18:10:38,018 [INFO] AgentSystem: validator_agent RECEIVED validate_itinerary from planner_agent
+2026-10-14 18:10:38,018 [INFO] AgentSystem: validator_agent SENT request_revision to planner_agent
+2026-10-14 18:10:38,019 [INFO] Orchestrator: Route: validator_agent -> planner_agent [request_revision]
+2026-10-14 18:10:38,019 [INFO] AgentSystem: planner_agent RECEIVED request_revision from validator_agent
+2026-10-14 18:10:38,019 [INFO] AgentSystem: Planner revising: Total cost $400.00 exceeds budget $100.00
+2026-10-14 18:10:38,019 [INFO] AgentSystem: planner_agent SENT validate_itinerary to validator_agent
+2026-10-14 18:10:38,019 [INFO] Orchestrator: Route: planner_agent -> validator_agent [validate_itinerary]
+2026-10-14 18:10:38,019 [WARNING] Orchestrator: Maximum iterations reached
+2026-10-14 18:19:38,872 [INFO] Orchestrator: Route: orchestrator -> planner_agent [propose_plan]
+2026-10-14 18:19:38,874 [INFO] AgentSystem: planner_agent RECEIVED propose_plan from orchestrator
+2026-10-14 18:19:38,874 [INFO] AgentSystem: planner_agent SENT validate_itinerary to validator_agent
+2026-10-14 18:19:38,875 [INFO] Orchestrator: Route: planner_agent -> validator_agent [validate_itinerary]
+2026-10-14 18:19:38,875 [INFO] AgentSystem: validator_agent RECEIVED validate_itinerary from planner_agent
+2026-10-14 18:19:38,875 [INFO] AgentSystem: validator_agent SENT approve_plan to orchestrator
+2026-10-14 18:19:38,875 [INFO] Orchestrator: Route: validator_agent -> orchestrator [approve_plan]
+2026-10-14 18:20:42,535 [INFO] Orchestrator: Route: orchestrator -> planner_agent [propose_plan]
+2026-10-14 18:20:42,537 [INFO] AgentSystem: planner_agent RECEIVED propose_plan from orchestrator
+2026-10-14 18:20:42,537 [INFO] AgentSystem: planner_agent SENT validate_itinerary to validator_agent
+2026-10-14 18:20:42,537 [INFO] Orchestrator: Route: planner_agent -> validator_agent [validate_itinerary]
+2026-10-14 18:20:42,537 [INFO] AgentSystem: validator_agent RECEIVED validate_itinerary from planner_agent
+2026-10-14 18:20:42,538 [INFO] AgentSystem: validator_agent SENT request_revision to planner_agent
+2026-10-14 18:20:42,538 [INFO] Orchestrator: Route: validator_agent -> planner_agent [request_revision]
+2026-10-14 18:20:42,538 [INFO] AgentSystem: planner_agent RECEIVED request_revision from validator_agent
+2026-10-14 18:20:42,538 [INFO] AgentSystem: Planner revising: Total cost $500.00 exceeds budget $450.00
+2026-10-14 18:20:42,538 [INFO] AgentSystem: planner_agent SENT validate_itinerary to validator_agent
+2026-10-14 18:20:42,538 [INFO] Orchestrator: Route: planner_agent -> validator_agent [validate_itinerary]
+2026-10-14 18:20:42,538 [INFO] AgentSystem: validator_agent RECEIVED validate_itinerary from planner_agent
+2026-10-14 18:20:42,539 [INFO] AgentSystem: validator_agent SENT approve_plan to orchestrator
+2026-10-14 18:20:42,539 [INFO] Orchestrator: Route: validator_agent -> orchestrator [approve_plan]
+2026-10-14 18:21:27,898 [ERROR] Orchestrator: Invalid request: A destination is required
+2026-10-14 18:21:27,902 [INFO] Orchestrator: Route: orchestrator -> planner_agent [propose_plan]
+2026-10-14 18:21:27,903 [INFO] AgentSystem: planner_agent RECEIVED propose_plan from orchestrator
+2026-10-14 18:21:27,903 [INFO] AgentSystem: planner_agent SENT validate_itinerary to validator_agent
+2026-10-14 18:21:27,903 [INFO] Orchestrator: Route: planner_agent -> validator_agent [validate_itinerary]
+2026-10-14 18:21:27,904 [INFO] AgentSystem: validator_agent RECEIVED validate_itinerary from planner_agent
+2026-10-14 18:21:27,904 [INFO] AgentSystem: validator_agent SENT request_revision to planner_agent
+2026-10-14 18:21:27,904 [INFO] Orchestrator: Route: validator_agent -> planner_agent [request_revision]
+2026-10-14 18:21:27,904 [INFO] AgentSystem: planner_agent RECEIVED request_revision from validator_agent
+2026-10-14 18:21:27,905 [INFO] AgentSystem: Planner revising: Total cost $500.00 exceeds budget $450.00
+2026-10-14 18:21:27,905 [INFO] AgentSystem: planner_agent SENT validate_itinerary to validator_agent
+2026-10-14 18:21:27,905 [INFO] Orchestrator: Route: planner_agent -> validator_agent [validate_itinerary]
+2026-10-14 18:21:27,905 [INFO] AgentSystem: validator_agent RECEIVED validate_itinerary from planner_agent
+2026-10-14 18:21:27,906 [INFO] AgentSystem: validator_agent SENT approve_plan to orchestrator
+2026-10-14 18:21:27,906 [INFO] Orchestrator: Route: validator_agent -> orchestrator [approve_plan]
+2026-10-14 18:21:27,913 [INFO] Orchestrator: Route: orchestrator -> planner_agent [propose_plan]
+2026-10-14 18:21:27,914 [INFO] AgentSystem: planner_agent RECEIVED propose_plan from orchestrator
+2026-10-14 18:21:27,914 [INFO] AgentSystem: planner_agent SENT validate_itinerary to validator_agent
+2026-10-14 18:21:27,914 [INFO] Orchestrator: Route: planner_agent -> validator_agent [validate_itinerary]
+2026-10-14 18:21:27,915 [INFO] AgentSystem: validator_agent RECEIVED validate_itinerary from planner_agent
+2026-10-14 18:21:27,915 [INFO] AgentSystem: validator_agent SENT approve_plan to orchestrator
+2026-10-14 18:21:27,915 [INFO] Orchestrator: Route: validator_agent -> orchestrator [approve_plan]
+2026-10-14 18:21:27,932 [INFO] Orchestrator: Route: orchestrator -> planner_agent [propose_plan]
+2026-10-14 18:21:27,953 [ERROR] Orchestrator: Workflow failed during agent execution
+Traceback (most recent call last):
+  File "C:\Users\lscot\Documents\Uni\2026\Term 2\COIT12204-AI-Assisted Software Development\Assessment 4\Assessemnt 4-Dule Agent Systems\orchestrator.py", line 50, in route_message
+    response = future.result(timeout=self.timeout_seconds)
+  File "C:\Users\lscot\AppData\Local\Programs\Python\Python313\Lib\concurrent\futures\_base.py", line 458, in result
+    raise TimeoutError()
+TimeoutError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\lscot\Documents\Uni\2026\Term 2\COIT12204-AI-Assisted Software Development\Assessment 4\Assessemnt 4-Dule Agent Systems\orchestrator.py", line 140, in run_workflow
+    current = self.route_message(current)
+  File "C:\Users\lscot\Documents\Uni\2026\Term 2\COIT12204-AI-Assisted Software Development\Assessment 4\Assessemnt 4-Dule Agent Systems\orchestrator.py", line 59, in route_message
+    raise TimeoutError(
+        f"Agent '{message.receiver}' exceeded {self.timeout_seconds}s timeout"
+    ) from exc
+TimeoutError: Agent 'planner_agent' exceeded 0.01s timeout
+2026-10-14 18:21:27,960 [INFO] Orchestrator: Route: orchestrator -> planner_agent [propose_plan]
+2026-10-14 18:21:27,961 [INFO] AgentSystem: planner_agent RECEIVED propose_plan from orchestrator
+2026-10-14 18:21:27,961 [INFO] AgentSystem: planner_agent SENT validate_itinerary to validator_agent
+2026-10-14 18:21:27,961 [INFO] Orchestrator: Route: planner_agent -> validator_agent [validate_itinerary]
+2026-10-14 18:21:27,962 [INFO] AgentSystem: validator_agent RECEIVED validate_itinerary from planner_agent
+2026-10-14 18:21:27,962 [INFO] AgentSystem: validator_agent SENT request_revision to planner_agent
+2026-10-14 18:21:27,963 [INFO] Orchestrator: Route: validator_agent -> planner_agent [request_revision]
+2026-10-14 18:21:27,963 [INFO] AgentSystem: planner_agent RECEIVED request_revision from validator_agent
+2026-10-14 18:21:27,963 [INFO] AgentSystem: Planner revising: Total cost $500.00 exceeds budget $100.00
+2026-10-14 18:21:27,963 [INFO] AgentSystem: planner_agent SENT validate_itinerary to validator_agent
+2026-10-14 18:21:27,964 [INFO] Orchestrator: Route: planner_agent -> validator_agent [validate_itinerary]
+2026-10-14 18:21:27,964 [INFO] AgentSystem: validator_agent RECEIVED validate_itinerary from planner_agent
+2026-10-14 18:21:27,964 [INFO] AgentSystem: validator_agent SENT request_revision to planner_agent
+2026-10-14 18:21:27,964 [INFO] Orchestrator: Route: validator_agent -> planner_agent [request_revision]
+2026-10-14 18:21:27,965 [INFO] AgentSystem: planner_agent RECEIVED request_revision from validator_agent
+2026-10-14 18:21:27,965 [INFO] AgentSystem: Planner revising: Total cost $400.00 exceeds budget $100.00
+2026-10-14 18:21:27,965 [INFO] AgentSystem: planner_agent SENT validate_itinerary to validator_agent
+2026-10-14 18:21:27,965 [INFO] Orchestrator: Route: planner_agent -> validator_agent [validate_itinerary]
+2026-10-14 18:21:27,965 [WARNING] Orchestrator: Maximum iterations reached
